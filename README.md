@@ -1,45 +1,39 @@
 # Scripting-readiness
+Here’s your content reformatted as a clear and structured **Markdown document**:
 
-# AWS EC2 & S3 Automation Script
+```markdown
+# AWS Resource Deployment Requirements
 
-## 📌 Project Overview
+## 🧾 Overview
 
-This shell script automates the provisioning of **Amazon EC2 instances** and **S3 buckets**, designed to meet client deployment needs while reinforcing key shell scripting concepts. It serves both as a practical tool and a learning artifact.
+This project involves automating the deployment of AWS resources using the AWS CLI. The key components include:
 
----
+- Creating an **EC2 instance**
+- Configuring an **S3 bucket**
+- Verifying **deployment statuses** using AWS CLI
 
-## 🚀 Features
+## 🔐 Prerequisites
 
-- Create EC2 instances with custom types
-- Provision S3 buckets with dynamic names
-- Track created resources using arrays
-- Secure sensitive data via environment variables
-- Accept command line arguments for flexible deployments
-- Implement robust error handling for AWS service exceptions
+Before running the deployment scripts, ensure the following:
 
----
+- AWS CLI is installed and configured with valid AWS credentials.
+- Necessary IAM permissions are granted to perform EC2 and S3 operations.
 
-## 🧠 Shell Scripting Concepts Used
+## 🧩 Code Structure Guidelines
 
-| Concept              | Description                                                                 |
-|----------------------|-----------------------------------------------------------------------------|
-| **Functions**         | Modular tasks for EC2/S3 creation and deployment verification               |
-| **Arrays**            | Track and manage created resources                                          |
-| **Environment Variables** | Store AWS credentials and region settings securely                        |
-| **Command Line Arguments** | Customize behavior with inputs like instance type and bucket name         |
-| **Error Handling**    | Gracefully catch and respond to AWS service failures                        |
+- Each AWS resource deployment should be **packaged as a function** for better readability and modularity.
+- Functions should be invoked within the main script to execute the deployment flow.
 
----
+## 🛠 Bash Script Requirements
 
-## ⚙️ Prerequisites
+- The script should be written primarily using **functions** to encapsulate logic.
+- It must include **error handling** to gracefully manage failures and provide meaningful feedback.
+- Logging or status messages should be included to track progress and outcomes.
 
-- AWS CLI installed and configured
-- Valid AWS credentials with permissions for EC2 and S3
-- Bash shell environment
+## ✅ Goals
 
----
+- Automate infrastructure setup using AWS CLI.
+- Maintain clean, readable, and reusable code.
+- Ensure robust error handling for production-grade reliability.
+```
 
-## 📦 Usage
-
-```bash
-./aws_setup.sh <instance_type> <bucket_name>
